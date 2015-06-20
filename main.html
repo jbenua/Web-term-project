@@ -57,9 +57,7 @@
     <script type="text/javascript" src='pinkTyper.js'></script>
     <script type="text/javascript">
         function expanddiv(id){
-            par.style.visibility="hidden";
             raise_opacity(0);
-            
             var currentEl=document.getElementById(id);
             for (var i=0, elems = document.getElementsByTagName('p'), len = elems.length; i<len; i++) {
                     removeClass(elems[i], 'active');
@@ -67,8 +65,10 @@
 
             if (currentEl) {
                 currentEl.className += ' active';
+                par.style.display="none";
             }
-            else return;
+            
+            else par.style.display="block";
         };
         
         function hasClass(element, cls) {

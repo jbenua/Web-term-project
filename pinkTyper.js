@@ -2,11 +2,6 @@ $(window).load(function() {
     console.log('page loaded');
     paragraph();
 
-            function animateText(textArea) {
-              var text = textArea.value;
-              var to = text.length, from = 0;
-            }
-
             function paragraph() {
               var chars = ['P','i','n','k',' ','s','t','a','r','s',' ','a','r','e',' ','f','a','l','l','i','n','g',' ','i','n',' ','l','i','n','e','s','.','.','.'];
               printLetters(chars, 0);
