@@ -1,12 +1,14 @@
 <html>
     <head>
         <title>Under the dome</title>
-        <link REL="stylesheet" TYPE="text/css" HREF="styles.css"/>
+        <link REL="stylesheet" TYPE="text/css" HREF="styles/styles.css"/>
     </head>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jq.."></script>
     <body class = 'main'>
         <div id="glass" style="margin: 7% 15%;    height: 86%; text-align: center;">
-            <div id="shooting_star"></div>
+            <div id="shooting_star1"></div>
+            <div id="shooting_star2"></div>
+            <div id="shooting_star3"></div>
             <h1 id="par"></h1>
             <table>
                 <td>
@@ -55,47 +57,8 @@
             </p>
         </div>     
     <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
-    <script type="text/javascript" src='pinkTyper.js'></script>
-    <script type="text/javascript">
-        function expanddiv(id){
-            raise_opacity(0);
-            var currentEl=document.getElementById(id);
-            for (var i=0, elems = document.getElementsByTagName('p'), len = elems.length; i<len; i++) {
-                    removeClass(elems[i], 'active');
-            }
-
-            if (currentEl) {
-                currentEl.className += ' active';
-                par.style.display="none";
-            }
-            
-            else par.style.display="block";
-        };
-        
-        function hasClass(element, cls) {
-            return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-        }
-        function removeClass(element, cls){
-            var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
-            element.className = element.className.replace(reg,' ');
-        }
-        function raise_opacity(cur_opacity)
-        {
-            setTimeout(function(){
-                if (cur_opacity < 0.7) {
-                    set_opacity(cur_opacity);
-                }
-                else return;
-                cur_opacity+=0.05;
-                raise_opacity(cur_opacity);
-            }, 1000);
-        }
-        
-        function set_opacity(opacity)
-        {
-            glass.style.backgroundColor=rgba(50, 27, 58, opacity);
-        }
-            
-            
-    </script>
+    <script type="text/javascript" src='scripts/contentView.js'></script>
+    <script type="text/javascript" src='scripts/pinkTyper.js'></script>
+    <script type="text/javascript" src='scripts/shootingStars.js'></script>
+</body>
 </html>

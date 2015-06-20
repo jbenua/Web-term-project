@@ -2,7 +2,7 @@
 
 body {
     background: url(images/sun2.png) no-repeat;
-    background-image: url("nastol.jpg");
+    background-image: url("../img/nastol.jpg");
     background-size: 100% 100%;
 }
 
