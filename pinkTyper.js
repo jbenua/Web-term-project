@@ -17,7 +17,6 @@ $(window).load(function() {
                   }, 100);
               } 
 
-
             function appear(letter) {
               //alert(letter);
               $('#par').append(letter); //OR:  document.getElementById('par').innerHtml += letter;
