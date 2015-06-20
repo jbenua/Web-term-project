@@ -61,17 +61,23 @@
             raise_opacity(0);
             
             var currentEl=document.getElementById(id);
-            for (var i=0, len = document.getElementsByTagName('p').length; i<len; i++) {
-                    document.getElementsByTagName('p')[i].style.display="none";
-                }
+            for (var i=0, elems = document.getElementsByTagName('p'), len = elems.length; i<len; i++) {
+                    removeClass(elems[i], 'active');
+            }
+
             if (currentEl) {
-                currentEl.style.display="block";
+                currentEl.className += ' active';
             }
             else return;
-            };
+        };
+        
         function hasClass(element, cls) {
             return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-            }
+        }
+        function removeClass(element, cls){
+            var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+            element.className = element.className.replace(reg,' ');
+        }
         function raise_opacity(cur_opacity)
         {
             setTimeout(function(){
