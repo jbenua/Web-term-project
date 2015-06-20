@@ -57,17 +57,19 @@
     <script type="text/javascript" src='pinkTyper.js'></script>
     <script type="text/javascript">
         function expanddiv(id){
-            par.style.visibility="hidden";
             raise_opacity(0);
-            
             var currentEl=document.getElementById(id);
             for (var i=0, len = document.getElementsByTagName('p').length; i<len; i++) {
                     document.getElementsByTagName('p')[i].style.display="none";
                 }
             if (currentEl) {
+                par.style.display="none";
                 currentEl.style.display="block";
             }
-            else return;
+            else
+                par.style.display="block";
+                //par.innerHTML="";
+                //paragraph();
             };
         function hasClass(element, cls) {
             return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
