@@ -21,6 +21,8 @@ button{
     color: #000000;
     border: none;
 }
+
+
 a{
     font-family: "Times New Roman", Times, serif;
     text-decoration:none;
@@ -32,6 +34,11 @@ p{
     width: 80%;
     margin: auto;
     margin-top: 50px;
+    display: none;
+}
+p.active
+{
+    display: block;
 }
 #par{
     font-style: italic;

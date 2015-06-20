@@ -9,26 +9,71 @@
             <h1 id="par"></h1>
             <table>
                 <td>
-                    <a href="main.html"><button id="but" onclick = "expanddiv()">Home</button></a>
+                    <!--<a href="main.html">-->
+                        <button id="but" onclick = "expanddiv('home')">Home</button>
+                    <!--</a>-->
                 </td>
                 <td>
-                    <a href="author.html"><button onclick = "expanddiv()">Author</button>
+                   <!-- <a href="author.html">-->
+                        <button onclick = "expanddiv('author')">Author</button>
+                    <!--</a>-->
                 </td>
                 <td>
-                    <a href="book.html"><button>Book</button>
+                    <!--<a href="book.html">-->
+                        <button onclick = "expanddiv('author')">Book</button>
+                    <!--</a>-->
                 </td>
                 <td>
-                    <a href="film.html"><button>Film</button>
+                    <!--<a href="film.html">-->
+                        <button onclick = "expanddiv('author')">Film</button>
+                    <!--</a>-->
                 </td>
             </table>
+            <p id="film">
+                Under the Dome is an American science-fiction drama television series. <br><br>
+                It premiered on CBS on June 24, 2013. The series was developed by Brian K. Vaughan and based on the novel of the same name by Stephen King.<br><br>
+                In the first season, Vaughan and King served as executive producers along with Neal Baer, Justin Falvey, Darryl Frank, Jack Bender, Steven Spielberg, and Stacey Snider.
+                Danish director Niels Arden Oplev produced and directed the pilot.
+                Baer serves as the showrunner for the series. Vaughan exited the series before the premiere of season two.<br><br>
+                On October 9, 2014, CBS renewed Under the Dome for a third season, which will premiere on June 25, 2015.</p>
+            <p id="author">
+                Stephen Edwin King (born September 21, 1947) is an American author of contemporary horror, supernatural fiction, suspense, science fiction, and fantasy.
+                His books have sold more than 350 million copies, many of which have been adapted into feature films, miniseries, television shows, and comic books.
+                <br><br>King has published 54 novels, including seven under the pen name Richard Bachman and six non-fiction books.
+                He has written nearly 200 short stories, most of which have been collected in book collections.
+                Many of his stories are set in his home state of Maine.
+                <br><br>King has received Bram Stoker Awards, World Fantasy Awards, and British Fantasy Society Awards.
+                His novella The Way Station (1980) was a Nebula Award novelette nominee.
+                In 2003, the National Book Foundation awarded him the Medal for Distinguished Contribution to American Letters.
+                His short story "The Man in the Black Suit" (1994) received the O. Henry Award.
+                He has also received awards for his contribution to literature for his entire oeuvre, such as the World Fantasy Award for Life Achievement (2004), the Canadian Booksellers Association Lifetime Achievement Award (2007), and the Grand Master Award from the Mystery Writers of America (2007).
+            </p>
+            <p id = "book">
+                Under the Dome is a science fiction novel by Stephen King published in November 2009. <br><br>
+                Set in and around a small Maine town, it tells an intricate, multi-character and point-of-view story of how the town's inhabitants contend with the calamity of being suddenly cut off from the outside world by an impassable, invisible barrier that literally drops out of a clear blue sky.
+            </p>
         </div>     
     <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
     <script type="text/javascript" src='pinkTyper.js'></script>
     <script type="text/javascript">
-        function expanddiv(){
+        function expanddiv(id){
             document.getElementById("par").style.visibility="hidden";
             raise_opacity(0);
+            var currentEl=document.getElementById(id);
+            if (currentEl) {
+                for (i in document.getElementsByTagName('p')) {
+                    if (hasClass(i, 'active')) {
+                        var reg = new RegExp('(\\s|^)'+classToRemove+'(\\s|$)');
+                        i.className=i.className.replace(reg,' ');
+                    }
+                }
+                currentEl.className +=" active";
+            }
+            else return;
             };
+        function hasClass(element, cls) {
+            return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+            }
         function raise_opacity(cur_opacity)
         {
             setTimeout(function(){
