@@ -61,10 +61,11 @@
             raise_opacity(0);
             var currentEl=document.getElementById(id);
             if (currentEl) {
-                for (i in document.getElementsByTagName('p')) {
+                for (i=0; i<document.getElementsByTagName('p').length; i++) {
+                    alert(i);
                     if (hasClass(i, 'active')) {
                         var reg = new RegExp('(\\s|^)'+classToRemove+'(\\s|$)');
-                        i.className=i.className.replace(reg,' ');
+                        document.getElementsByTagName('p')[i].className=document.getElementsByTagName('p')[i].className.replace(reg,' ');
                     }
                 }
                 currentEl.className +=" active";
