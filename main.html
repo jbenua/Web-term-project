@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Under the dome</title>
+        <link REL="stylesheet" TYPE="text/css" HREF="styles.css"/>
+    </head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jq.."></script>
+    <body class = 'main'>
+        <div id="glass" style="margin: 7% 15%;    height: 86%; text-align: center;">
+            <h1 id="par"></h1>
+            <table>
+                <td>
+                    <a href="main.html"><button id="but" onclick = "expanddiv()">Home</button></a>
+                </td>
+                <td>
+                    <a href="author.html"><button onclick = "expanddiv()">Author</button>
+                </td>
+                <td>
+                    <a href="book.html"><button>Book</button>
+                </td>
+                <td>
+                    <a href="film.html"><button>Film</button>
+                </td>
+            </table>
+        </div>     
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+    <script type="text/javascript" src='pinkTyper.js'></script>
+    <script type="text/javascript">
+        function expanddiv(){
+            document.getElementById("par").style.visibility="hidden";
+            raise_opacity(0);
+            };
+        function raise_opacity(cur_opacity)
+        {
+            setTimeout(function(){
+                if (cur_opacity < 0.7) {
+                    set_opacity(cur_opacity);
+                }
+                else return;
+                cur_opacity+=0.05;
+                raise_opacity(cur_opacity);
+            }, 100);
+        }
+        
+        function set_opacity(opacity)
+        {
+            document.getElementById("glass").style.backgroundColor=rgba(50, 27, 58, opacity);
+        }
+            
+            
+    </script>
+</html>
