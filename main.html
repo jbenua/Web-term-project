@@ -61,7 +61,7 @@
             raise_opacity(0);
             
             var currentEl=document.getElementById(id);
-            for (var i=0; i<document.getElementsByTagName('p').length; i++) {
+            for (var i=0, len = document.getElementsByTagName('p').length; i<len; i++) {
                     document.getElementsByTagName('p')[i].style.display="none";
                 }
             if (currentEl) {
