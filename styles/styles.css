@@ -1,8 +1,8 @@
 @import url("star.css");
 
 body {
-    background-image: url("../img/nastol.jpg");
-    background-size:100%;
+    background: url("../img/nastol.jpg") no-repeat;
+    background-size: 100% 100%;
     overflow: hidden;
 }
 div.content{
