@@ -1,5 +1,6 @@
         function expanddiv(id){
-            raise_opacity(0);
+            opacity=parseOpacity();
+            opacity ? raise_opacity(opacity) : raise_opacity(0);
             var currentEl=document.getElementById(id);
             for (var i=0, elems = document.getElementsByTagName('p'), len = elems.length; i<len; i++) {
                     removeClass(elems[i], 'active');
@@ -12,9 +13,11 @@
             
             else par.style.display="block";
         };
-        
-        function hasClass(element, cls) {
-            return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+        function parseOpacity()
+        {
+            var temp=glass.style.backgroundColor.split(' ');
+            temp=temp[temp.length-1].split(')');
+            return temp[0];
         }
         function removeClass(element, cls){
             var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
@@ -27,14 +30,14 @@
                     set_opacity(cur_opacity);
                 }
                 else return;
-                cur_opacity+=0.05;
+                cur_opacity+=0.001;
                 raise_opacity(cur_opacity);
-            }, 1000);
+            }, 0.01);
         }
         
         function set_opacity(opacity)
         {
-            glass.style.backgroundColor=rgba(50, 27, 58, opacity);
+            glass.style.backgroundColor="rgba(50, 27, 58, "+opacity+")";
         }
             
             
