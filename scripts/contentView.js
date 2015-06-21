@@ -1,11 +1,10 @@
         function expanddiv(id){
             opacity=parseOpacity();
-            opacity ? raise_opacity(opacity) : raise_opacity(0);
+            raise_opacity(opacity ? opacity : 0);
             var currentEl=document.getElementById(id);
             for (var i=0, elems = document.getElementsByTagName('p'), len = elems.length; i<len; i++) {
                     removeClass(elems[i], 'active');
             }
-
             if (currentEl) {
                 currentEl.className += ' active';
                 par.style.display="none";
@@ -32,7 +31,7 @@
                 else return;
                 cur_opacity+=0.001;
                 raise_opacity(cur_opacity);
-            }, 0.01);
+            }, 0.0005);
         }
         
         function set_opacity(opacity)
