@@ -29,14 +29,13 @@
                     set_opacity(cur_opacity);
                 }
                 else return;
-                cur_opacity+=0.001;
+                cur_opacity+=0.005;
                 raise_opacity(cur_opacity);
-            }, 0.0005);
+            }, 0.0001);
         }
         
         function set_opacity(opacity)
         {
             glass.style.backgroundColor="rgba(50, 27, 58, "+opacity+")";
         }
-            
             
