@@ -9,7 +9,6 @@
                 currentEl.className += ' active';
                 par.style.display="none";
             }
-            
             else par.style.display="block";
         };
         function parseOpacity()

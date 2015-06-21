@@ -44,18 +44,17 @@ button:hover{
     background: #A95676;
 }
 p{
-    width: 80%;
-    margin: auto;
-    margin-top: 25px;
-    display: none;
+    width: 60%;
     color: #FFFFFF;
-/*    opacity: 0;
-    transition: display 5s, opacity 5s;*/
+    position: absolute;
+    top: 220px;
+    left: 20%;
+    opacity: 0;
+    transition: opacity 5s, opacity 3s;
 }
 p.active
 {
-    display: block;
-/*    opacity: 1;*/
+    opacity: 1;
 }
 
 #par{
