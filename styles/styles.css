@@ -15,7 +15,8 @@ h1{
     opacity: 0.3;
     position: absolute;
     top: 20px;
-    margin-left: 40%;
+    width: 24%;
+    margin-left: 38%;
     transition: opacity 2s;
     -webkit-transition: opacity 2s;
 }
@@ -47,10 +48,10 @@ p{
     width: 60%;
     color: #FFFFFF;
     position: absolute;
-    top: 220px;
+    top: 240px;
     left: 20%;
     opacity: 0;
-    transition: opacity 5s, opacity 3s;
+    transition: opacity 3s;
 }
 p.active
 {

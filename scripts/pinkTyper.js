@@ -10,10 +10,13 @@ $(window).load(function() {
                   setTimeout(function () {
                       if (i < chars.length){
                         appear(chars[i]);
+                        i += 1;
+                        printLetters(chars, i);
                       }
-                      else return;
-                      i += 1;  
-                      printLetters(chars, i);
+                      else{
+                        par.innerHTML="";
+                        printLetters(chars, 0);
+                      };
                   }, 100);
               } 
 
