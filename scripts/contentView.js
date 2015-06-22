@@ -1,18 +1,17 @@
         function expanddiv(id){
             var a=parseOpacity();
-            var opacity = a ? a : 0
+            var opacity = a ? a : 0;
+            id == 'home' ? decrease_opacity(opacity) : raise_opacity(opacity);
             var currentEl=document.getElementById(id);
             for (var i=0, elems = document.getElementsByTagName('p'), len = elems.length; i<len; i++) {
                     removeClass(elems[i], 'active');
             }
             if (currentEl) {
-                raise_opacity(opacity);
                 currentEl.className += ' active';
                 par.style.display="none";
             }
             else
             {
-                decrease_opacity(opacity);
                 par.style.display="block";
             }
         };
@@ -48,7 +47,7 @@
                 }
                 else{
                     //set_opacity(0.7);
-                    alert("i'm returning with op=" + parseOpacity());
+                    alert("i'm returning with op=" + cur_opacity());
                     return;
                 }
                 cur_opacity+=0.005;
