@@ -19,7 +19,7 @@
         {
             var temp=glass.style.backgroundColor.split(' ');
             temp=temp[temp.length-1].split(')');
-            return temp[0];
+            return Number(temp[0]);
         }
         function removeClass(element, cls){
             var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
@@ -46,7 +46,7 @@
                     set_opacity(cur_opacity);
                 }
                 else{
-                    //set_opacity(0.7);
+                    set_opacity(0.7);
                     alert("i'm returning with op=" + cur_opacity());
                     return;
                 }
