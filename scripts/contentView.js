@@ -7,7 +7,7 @@
                     removeClass(elems[i], 'active');
             }
             if (currentEl) {
-                currentEl.className += ' active';
+                currentEl.className += 'active';
                 par.style.display="none";
             }
             else
