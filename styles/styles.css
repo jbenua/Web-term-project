@@ -2,12 +2,24 @@
 
 body {
     background: url("../img/nastol.jpg") no-repeat;
-    background-size: 100% 100%;
+    background-size:  100% 90%;
     overflow: hidden;
+}
+img{
+    width: 60px;
+    height: 30px;
+}
+a.imdb{
+    position: absolute;
+}
+a.wikia{
+    position: absolute;
+    left: 75px;
 }
 div.content{
     margin: 10% 15%;
-    height: 550px;
+    margin-bottom: 10%;
+    height: 75%;
     text-align: center;
 }
 h1{
@@ -21,7 +33,7 @@ h1{
     transition: opacity 2s;
     -webkit-transition: opacity 2s;
 }
-h1:hover{
+img, h1:hover{
     opacity:1;
 }
 h2{
