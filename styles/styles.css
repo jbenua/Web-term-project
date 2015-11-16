@@ -9,13 +9,6 @@ img{
     width: 60px;
     height: 30px;
 }
-a.imdb{
-    position: absolute;
-}
-a.wikia{
-    position: absolute;
-    left: 75px;
-}
 div.content{
     margin: 10% 15%;
     margin-bottom: 10%;
